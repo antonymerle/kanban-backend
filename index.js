@@ -4,7 +4,7 @@ Auteur: Antony Merle
 Date: 2022-11-04
 ---
 */
-require("dotenv").config();
+// require("dotenv").config();
 
 const express = require("express");
 const app = express();
