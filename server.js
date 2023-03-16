@@ -10,6 +10,7 @@ const express = require("express");
 const app = express();
 const http = require("http");
 const server = http.createServer(app);
+const cors = require("cors");
 const { Server } = require("socket.io");
 const io = new Server(server, {
   cors: {
@@ -17,8 +18,9 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-server.listen(7001, "localhost");
-const cors = require("cors");
+const port = process.env.PORT || 3000;
+
+// server.listen(port, "localhost");
 
 let { uuidv4, tasks } = require("./fakeData");
 
