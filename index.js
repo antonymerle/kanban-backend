@@ -20,7 +20,7 @@ const io = new Server(server, {
 });
 const port = process.env.PORT || 3000;
 
-// server.listen(port, "localhost");
+server.listen(port, "localhost");
 
 let { uuidv4, tasks } = require("./fakeData");
 
